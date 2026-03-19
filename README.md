@@ -143,6 +143,5 @@ Feedstock Maintainers
 =====================
 
 * [@ThomasGandilhon](https://github.com/ThomasGandilhon/)
-* [@condacircus](https://github.com/condacircus/)
 * [@ewu63](https://github.com/ewu63/)
 
