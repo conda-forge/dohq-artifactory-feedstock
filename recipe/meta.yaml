@@ -7,7 +7,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/dohq-artifactory-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/dohq-artifactory-{{ version }}.tar.gz
   sha256: 6018c8a2e0bdc912b737909f1dfa88eb68145822e1ad63d6badcc093183a3653
 
 build:
@@ -24,7 +24,7 @@ requirements:
     - python >={{ python_min }},<3.12
     - pyjwt >=2.0,<3.0
     - python-dateutil
-    - requests>=2.30.0
+    - requests >=2.30.0
 
 test:
   imports:
