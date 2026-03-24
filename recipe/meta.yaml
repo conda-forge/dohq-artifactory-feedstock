@@ -21,8 +21,8 @@ requirements:
     - pip
     - python {{ python_min }}
   run:
+    - python >={{ python_min }},<3.12
     - pyjwt ~=2.0
-    - python >={{ python_min }}
     - python-dateutil
     - requests
 
