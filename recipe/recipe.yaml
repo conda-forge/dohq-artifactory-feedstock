@@ -2,15 +2,15 @@ schema_version: 1
 
 context:
   name: dohq-artifactory
-  version: "0.10.3"
+  version: "1.0.0"
 
 package:
   name: ${{ name|lower }}
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/dohq_artifactory-${{ version }}.tar.gz
-  sha256: 97076ff7316fb1ed9973dce20c6c6924959185894a6817e93e4941f21bccf53b
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/{{ name | replace('-', '_') }}-${{ version }}.tar.gz
+  sha256: 11099229572789ed38336d9ca4da2c98598a35a7cc3f183b03cdd97f10295963
 
 build:
   number: 1
