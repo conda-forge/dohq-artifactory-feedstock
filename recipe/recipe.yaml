@@ -13,7 +13,7 @@ source:
   sha256: 11099229572789ed38336d9ca4da2c98598a35a7cc3f183b03cdd97f10295963
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv
 
@@ -34,6 +34,15 @@ tests:
         - dohq_artifactory
       pip_check: true
       python_version: ${{ python_min }}
+  - script: |
+      # first download the tarball since pypi archive does not contain tests
+      # but it does have the right version so we cannot only use the GitHub source
+      curl -sL https://github.com/devopshq/artifactory/archive/refs/tags/${{ version }}.tar.gz | tar xz
+      python -m pytest artifactory-${{ version }}/tests -munit
+    requirements:
+      run:
+        - pytest >=7.0.0
+        - responses >=0.23.1
 
 about:
   summary: A Python interface to Artifactory
