@@ -23,7 +23,7 @@ requirements:
     - pip
     - python ${{ python_min }}.*
   run:
-    - python >=${{ python_min }},<3.12
+    - python >=${{ python_min }},<3.13
     - pyjwt >=2.0,<3.0
     - python-dateutil
     - requests >=2.30.0
