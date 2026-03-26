@@ -7,7 +7,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/dohq-artifactory-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/dohq_artifactory-{{ version }}.tar.gz
   sha256: aef34d70abd95648c400bc4f9c0b20ef14067a1dd50da87e2aefacd3a0176ca6
 
 build:
