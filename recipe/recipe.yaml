@@ -34,8 +34,9 @@ tests:
         - dohq_artifactory
       pip_check: true
       python_version: ${{ python_min }}
-  - script:
-      - python -m pytest -munit
+  - script: |
+      curl -sL https://github.com/devopshq/artifactory/archive/refs/tags/${{ version }}.tar.gz | tar xz
+      python -m pytest artifactory-${{ version }}/tests -munit
     requirements:
       run:
         - pytest >=7.0.0
