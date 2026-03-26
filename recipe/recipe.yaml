@@ -35,6 +35,8 @@ tests:
       pip_check: true
       python_version: ${{ python_min }}
   - script: |
+      # first download the tarball since pypi archive does not contain tests
+      # but it does have the right version so we cannot only use the GitHub source
       curl -sL https://github.com/devopshq/artifactory/archive/refs/tags/${{ version }}.tar.gz | tar xz
       python -m pytest artifactory-${{ version }}/tests -munit
     requirements:
