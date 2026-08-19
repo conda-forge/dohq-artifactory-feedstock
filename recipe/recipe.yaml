@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: dohq-artifactory
-  version: "1.0.1"
+  version: "1.0.2"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: c34adaf6faede3178e5355ce6a40ae92f03a126e2b2baa122f0b60285aeee51b
+  sha256: 6ae156768d80474794d1abe9d16cd59f0aa1b2b124c180889be62abd8fd27901
 
 build:
   number: 0
